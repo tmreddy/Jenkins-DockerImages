@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        // Docker image name using your Docker Hub username
+        // Replace with your actual Docker Hub username
         DOCKER_IMAGE = "tmreddy/sample-app"
         DOCKER_TAG   = "latest"
     }
@@ -27,7 +27,6 @@ pipeline {
             steps {
                 script {
                     echo "Pushing Docker image to Docker Hub"
-                    // Use Jenkins credentials ID matching Docker Hub username
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
                         docker.image("${DOCKER_IMAGE}:${DOCKER_TAG}").push()
                     }
