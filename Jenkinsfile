@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Docker image name using your Docker Hub username
-        DOCKER_IMAGE = "tatiparthymreddy/sample-app"
+        DOCKER_IMAGE = "tmreddy/sample-app"
         DOCKER_TAG   = "latest"
     }
 
