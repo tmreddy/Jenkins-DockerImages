@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/your-repo.git'
+                git branch: 'main', url: 'https://github.com/tmreddy/Jenkins-DockerImages'
             }
         }
 
